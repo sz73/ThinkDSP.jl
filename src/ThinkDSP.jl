@@ -1,4 +1,4 @@
-module TDSP
+module ThinkDSP
 
 
 using FFTW
