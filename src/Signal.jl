@@ -40,12 +40,12 @@ function latexify(s::Signal)
     end
 
     if s.func |> typeof <: Function
-        s = L"%$(name)(t)=%$(s.func)(2π %$(s.freq) (t + %$(s.offset) s))* %$(s.amp)"
+        s = L"%$(name)(t)=%$(s.func)(2π %$(s.freq) (t + %$(s.offset) s)) · %$(s.amp)"
     else
 
         s1 = L"%$(name)(t)="
         s2 = [
-            L" %$(s.func[i])(2π %$(s.freq[i]) (t + %$(s.offset[i]) s))* %$(s.amp[i]) +"
+            L" %$(s.func[i])(2π %$(s.freq[i]) (t + %$(s.offset[i]) s)) · %$(s.amp[i]) +"
             for _ = 1:length(s.func)
         ]
         s3 = *(s2...)

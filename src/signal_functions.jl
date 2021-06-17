@@ -1,7 +1,7 @@
 function triangle(t, a = 1)
-    abs(2 * a - 2 * mod(abs(2 * t/(2*pi)), 2)) - a
+    t = mod(abs(2 * t/(2*pi)), 2)
+    abs(2 * a - 2 * t) - a
 end
-
 
 function squarewave(t, a = 1)
     t = 2*t
