@@ -18,9 +18,9 @@ Functionality:
 
 Three Structs: 
 
-    - Signal
-    - Wave 
-    - Spectrum
+- Signal
+- Wave 
+- Spectrum
 
 One can construct a signal after importing the package.
 
